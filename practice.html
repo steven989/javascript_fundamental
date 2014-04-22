@@ -1,71 +1,151 @@
 <script>
 
-// Fortune teller exercise
+// document.write("<h1> Variable exercises </h1>")
 
-document.write("<h3>Fortune teller exercise</h3>")
+// // Fortune teller exercise
 
-var numberChildren = 2
-var partnerName = "Myles"
-var geoLocation = "San Francisco"
-var jobTitle = "Entrepreneur"
+// document.write("<h3>Fortune teller exercise</h3>")
 
-document.write("<p> You will be an " + jobTitle.toLowerCase() + " in " + geoLocation + " and married to " + partnerName + " with " + numberChildren + " kids. </p>")
+// var numberChildren = 2
+// var partnerName = "Myles"
+// var geoLocation = "San Francisco"
+// var jobTitle = "Entrepreneur"
 
-// The age calculator
+// document.write("<p> You will be an " + jobTitle.toLowerCase() + " in " + geoLocation + " and married to " + partnerName + " with " + numberChildren + " kids. </p>")
 
-document.write("<h3>The age calculator</h3>")
+// // The age calculator
 
-var currentYear = new Date().getFullYear();
-var birthYear = window.prompt("Please enter your birth year:");
+// document.write("<h3>The age calculator</h3>")
 
-var age1 = currentYear - birthYear - 1
-var age2 = currentYear - birthYear 
+// var currentYear = new Date().getFullYear();
+// var birthYear = window.prompt("Please enter your birth year:");
 
-document.write ("<p>You are either "+ age1 + " or " + age2 + " right now.</p>")
+// var age1 = currentYear - birthYear - 1
+// var age2 = currentYear - birthYear 
 
-
-// The lifetime supply calculator
-
-document.write("<h3>Lifetime supply calculator</h3>")
-
-var age = 24
-var maxAge = 88
-var poundsPerDay = 3
-
-var totalSupply = (maxAge - age)*365*poundsPerDay
-var totalSupplyinTons = totalSupply / 2000
-
-document.write ("<p>You will eat "+ totalSupply + " pounds "+ " or " + totalSupplyinTons +" tons of food in the rest of your life time. </p>")
+// document.write ("<p>You are either "+ age1 + " or " + age2 + " right now.</p>")
 
 
+// // The lifetime supply calculator
 
-// The Geometrizer
+// document.write("<h3>Lifetime supply calculator</h3>")
 
-document.write("<h3>The geometrizer</h3>")
+// var age = 24
+// var maxAge = 88
+// var poundsPerDay = 3
 
-var radius = window.prompt("Enter the radius of a circle in centimeters:")
+// var totalSupply = (maxAge - age)*365*poundsPerDay
+// var totalSupplyinTons = totalSupply / 2000
 
-var circumference = 2*Math.PI*radius
-var area = Math.PI*Math.pow(radius,2)
-
-document.write ("<p>The circumference of the circle is "+ Math.round(circumference*100)/100 + " centimeters, and the area of the circle is "+ Math.round(area*100)/100 + " centimeters squared. </p>")
+// document.write ("<p>You will eat "+ totalSupply + " pounds "+ " or " + totalSupplyinTons +" tons of food in the rest of your life time. </p>")
 
 
-// The temperature converter
+
+// // The Geometrizer
+
+// document.write("<h3>The geometrizer</h3>")
+
+// var radius = window.prompt("Enter the radius of a circle in centimeters:")
+
+// var circumference = 2*Math.PI*radius
+// var area = Math.PI*Math.pow(radius,2)
+
+// document.write ("<p>The circumference of the circle is "+ Math.round(circumference*100)/100 + " centimeters, and the area of the circle is "+ Math.round(area*100)/100 + " centimeters squared. </p>")
+
+
+// // The temperature converter
+
+// document.write("<h3>The temperature converter</h3>")
+
+// var celsius = window.prompt("Enter a temperature in Celsius:")
+
+// var celsiusToFarenheit = celsius * 9/5 +32
+
+// document.write("<p>"+celsius +" degrees Celsius is "+Math.round(celsiusToFarenheit*10)/10+" degrees Fahrenheit.")
+
+// var fahrenheit = window.prompt("Enter a temperature in Fahrenheit:")
+
+// var fahrenheitToCelsis = (fahrenheit - 32) * 5/9
+
+// document.write("<p>"+fahrenheit+" degrees Fahrenheit is "+Math.round(fahrenheitToCelsis*10)/10+" degrees Celsius.")
+
+
+// Function exercises
+
+document.write("<h1> Function exercises </h1>")
+
+document.write("<h3> Fortune teller functions </h3>")
+
+function fortuneTeller(numberChildren,partnerName,geoLocation,jobTitle) {
+
+    document.write("<p> You will be an "+jobTitle+" and married to "+partnerName+" with "+numberChildren+" kids. </p>")
+
+}
+
+fortuneTeller(2,"Myles","San Francisco","entrepreneur")
+
+
+document.write("<h3>Age calculator</h3>")
+
+function ageCalculator(birthYear) {
+
+    age1 = new Date().getFullYear() - birthYear - 1
+    age2 = new Date().getFullYear() - birthYear
+
+    return "<p>You are either "+age1+" or "+age2+" right now.</p>"
+
+}
+
+ageCalculator(1989)
+
+
+document.write(ageCalculator(1989))
+
+document.write("<h3>The lifetime supply calculator</h3>")
+
+MAXAGE = 88
+
+function calculateSupply(currentAge,poundsPerDay) {
+
+    return (MAXAGE-currentAge)*365*poundsPerDay
+
+}
+
+document.write("<p>You will eat "+calculateSupply(24,3)+" pounds of food in the rest of your life time.</p>")
+
+
+document.write("<h3>Geometrizer</h3>")
+
+function CalcCircumference(radius) {
+
+    return 2*Math.PI*radius
+
+}
+
+function CalcArea(radius) {
+
+    return Math.PI*Math.pow(radius,2)
+
+}
+
+document.write("<p>The circumference of a circle with a radius of 5 centimeters is "+Math.round(CalcCircumference(5)*100)/100+" centimeters and the area of the circle is "+Math.round(CalcArea(5)*100)/100+" centimeters.")
+
 
 document.write("<h3>The temperature converter</h3>")
 
-var celsius = window.prompt("Enter a temperature in Celsius:")
+function CtoF(c) {
 
-var celsiusToFarenheit = celsius * 9/5 +32
+    return c * 9/5 + 32
 
-document.write("<p>"+celsius +" degrees Celsius is "+Math.round(celsiusToFarenheit*10)/10+" degrees Fahrenheit.")
+}
 
-var fahrenheit = window.prompt("Enter a temperature in Fahrenheit:")
+function FtoC(f) {
 
-var fahrenheitToCelsis = (fahrenheit - 32) * 5/9
+    return (f - 32) * 5/9
 
-document.write("<p>"+fahrenheit+" degrees Fahrenheit is "+Math.round(fahrenheitToCelsis*10)/10+" degrees Celsius.")
+}
+
+document.write("25 degrees Celsius is nice! It's "+Math.round(CtoF(25)*10)/10+" degrees Fahrenheit. 100 degrees Fahrenheit is hot! It's "+Math.round(FtoC(100)*10)/10+" degrees Celsius.")
 
 
 </script>
