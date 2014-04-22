@@ -26,13 +26,13 @@
 // document.write ("<p>You are either "+ age1 + " or " + age2 + " right now.</p>")
 
 
-// // The lifetime supply calculator
+// The lifetime supply calculator
 
 // document.write("<h3>Lifetime supply calculator</h3>")
 
 // var age = 24
 // var maxAge = 88
-// var poundsPerDay = 3
+// var poundsPerDay = 4.7
 
 // var totalSupply = (maxAge - age)*365*poundsPerDay
 // var totalSupplyinTons = totalSupply / 2000
@@ -70,82 +70,155 @@
 // document.write("<p>"+fahrenheit+" degrees Fahrenheit is "+Math.round(fahrenheitToCelsis*10)/10+" degrees Celsius.")
 
 
-// Function exercises
+// // Function exercises
 
-document.write("<h1> Function exercises </h1>")
+// document.write("<h1> Function exercises </h1>")
 
-document.write("<h3> Fortune teller functions </h3>")
+// document.write("<h3> Fortune teller functions </h3>")
 
-function fortuneTeller(numberChildren,partnerName,geoLocation,jobTitle) {
+// function fortuneTeller(numberChildren,partnerName,geoLocation,jobTitle) {
 
-    document.write("<p> You will be an "+jobTitle+" and married to "+partnerName+" with "+numberChildren+" kids. </p>")
+//     document.write("<p> You will be an "+jobTitle+" and married to "+partnerName+" with "+numberChildren+" kids. </p>")
 
-}
+// }
 
-fortuneTeller(2,"Myles","San Francisco","entrepreneur")
-
-
-document.write("<h3>Age calculator</h3>")
-
-function ageCalculator(birthYear) {
-
-    age1 = new Date().getFullYear() - birthYear - 1
-    age2 = new Date().getFullYear() - birthYear
-
-    return "<p>You are either "+age1+" or "+age2+" right now.</p>"
-
-}
-
-ageCalculator(1989)
+// fortuneTeller(2,"Myles","San Francisco","entrepreneur")
 
 
-document.write(ageCalculator(1989))
+// document.write("<h3>Age calculator</h3>")
 
-document.write("<h3>The lifetime supply calculator</h3>")
+// function ageCalculator(birthYear) {
 
-MAXAGE = 88
+//     age1 = new Date().getFullYear() - birthYear - 1
+//     age2 = new Date().getFullYear() - birthYear
 
-function calculateSupply(currentAge,poundsPerDay) {
+//     return "<p>You are either "+age1+" or "+age2+" right now.</p>"
 
-    return (MAXAGE-currentAge)*365*poundsPerDay
+// }
 
-}
-
-document.write("<p>You will eat "+calculateSupply(24,3)+" pounds of food in the rest of your life time.</p>")
-
-
-document.write("<h3>Geometrizer</h3>")
-
-function CalcCircumference(radius) {
-
-    return 2*Math.PI*radius
-
-}
-
-function CalcArea(radius) {
-
-    return Math.PI*Math.pow(radius,2)
-
-}
-
-document.write("<p>The circumference of a circle with a radius of 5 centimeters is "+Math.round(CalcCircumference(5)*100)/100+" centimeters and the area of the circle is "+Math.round(CalcArea(5)*100)/100+" centimeters.")
+// ageCalculator(1989)
 
 
-document.write("<h3>The temperature converter</h3>")
+// document.write(ageCalculator(1989))
 
-function CtoF(c) {
+// document.write("<h3>The lifetime supply calculator</h3>")
 
-    return c * 9/5 + 32
+// MAXAGE = 88
 
-}
+// function calculateSupply(currentAge,poundsPerDay) {
 
-function FtoC(f) {
+//     return (MAXAGE-currentAge)*365*poundsPerDay
 
-    return (f - 32) * 5/9
+// }
 
-}
+// document.write("<p>You will eat "+calculateSupply(24,4.7)+" pounds of food in the rest of your life time.</p>")
 
-document.write("25 degrees Celsius is nice! It's "+Math.round(CtoF(25)*10)/10+" degrees Fahrenheit. 100 degrees Fahrenheit is hot! It's "+Math.round(FtoC(100)*10)/10+" degrees Celsius.")
+
+// document.write("<h3>Geometrizer</h3>")
+
+// function CalcCircumference(radius) {
+
+//     return 2*Math.PI*radius
+
+// }
+
+// function CalcArea(radius) {
+
+//     return Math.PI*Math.pow(radius,2)
+
+// }
+
+// document.write("<p>The circumference of a circle with a radius of 5 centimeters is "+Math.round(CalcCircumference(5)*100)/100+" centimeters and the area of the circle is "+Math.round(CalcArea(5)*100)/100+" centimeters.")
+
+
+// document.write("<h3>The temperature converter</h3>")
+
+// function CtoF(c) {
+
+//     return c * 9/5 + 32
+
+// }
+
+// function FtoC(f) {
+
+//     return (f - 32) * 5/9
+
+// }
+
+// document.write("25 degrees Celsius is nice! It's "+Math.round(CtoF(25)*10)/10+" degrees Fahrenheit. 100 degrees Fahrenheit is hot! It's "+Math.round(FtoC(100)*10)/10+" degrees Celsius.")
+
+
+// Control flow
+
+// document.write("<h1>Control flow</h1>")
+
+// document.write("<h3>What number is bigger</h3>")
+
+// function greaterNum(num1,num2) {
+
+//     if (num1 > num2) {
+//         return num1
+//     } else {    
+//         return num2
+//     }
+
+// }
+
+// document.write("<p>Between 5 and 9, "+greaterNum(5,9)+" is the bigger number. Between 12303 and 92343, "+greaterNum(12303,92343)+" is the bigger number.")
+
+
+// document.write("<h3>The World Translator</h3>")
+
+// function helloWorld(lang) {
+
+//     if (lang === "en") { return "Hello world!"}
+//     else if (lang === "de") {return "Hallo Welt!" }
+//     else if (lang === "fr") {return "Bonjour tout le monde!"}
+//     else if (lang === "it") {return "Ciao mondo!"}
+//     else if (lang === "sp") {return "Hola mundo!"}
+//     else {return "Hello world!"}
+
+// }
+
+// var langs = ["en","de","fr","it","sp","jp"]
+
+// for (i=0;i<langs.length;i++) {
+
+//     document.write("<p>"+helloWorld(langs[i])+"</p>")
+
+// }
+
+// document.write("<h3>The Grade Assigner</h3>")
+
+// function assignGrade(numGrade) {
+
+//     if (numGrade >=0 && numGrade < 50) { return "F"}
+//     else if (numGrade >=50 && numGrade < 60) {return "D"}
+//     else if (numGrade >= 60 && numGrade < 75) {return "C"}
+//     else if (numGrade >= 75 && numGrade < 90) {return "B"}
+//     else if (numGrade >= 90 && numGrade <= 100) {return "A"}
+//     else {return "Invalid choice"}
+
+// }
+
+// for (i=10;i<=110;i+=10) {
+
+//     document.write("<p>You have received a grade of "+assignGrade(i)+"</p>")
+
+// }
+
+// document.write("<h3>The Plurilizer</h3>")
+
+// function plurilize(animal,number) {
+
+//     if (number > 1) {return number+" "+animal+"s"}
+//     else {return number+" "+animal}
+
+// }
+
+
+// document.write("<p>"+plurilize("dog",4)+", "+plurilize("chicken",1)+", "+plurilize("cat",3)+", "+plurilize("eel",6)+"</p>")
+
 
 
 </script>
