@@ -221,27 +221,103 @@
 
 // Array exercise
 
-document.write("<h1>Array exercise</h1>")
+// document.write("<h1>Array exercise</h1>")
 
-var favoriteFruits = ['Watermelon','Banana','Apple',"Orange","Grape"]
+// var favoriteFruits = ['Watermelon','Banana','Apple',"Orange","Grape"]
 
-var i = 0
+// var i = 0
 
 
-do {
+// do {
 
-    var pre
+//     var pre
 
-    if (i === 0) {pre = "1st" ;}
-    else if (i === 1) {pre = "2nd" ;}
-    else if (i === 2) {pre = "3rd" ;}
-    else {pre = i+1+"th" ;}
+//     if (i === 0) {pre = "1st" ;}
+//     else if (i === 1) {pre = "2nd" ;}
+//     else if (i === 2) {pre = "3rd" ;}
+//     else {pre = i+1+"th" ;}
 
-    document.write("<p>My "+pre+" favorite fruit is "+favoriteFruits[i]+"</p>")
+//     document.write("<p>My "+pre+" favorite fruit is "+favoriteFruits[i]+"</p>")
     
-    i++;
+//     i++;
 
-} while (i < favoriteFruits.length)
+// } while (i < favoriteFruits.length)
+
+
+// Recipe card
+
+// document.write("<h1>The recipe card</h1>")
+
+// function Recipe(title,servings) {
+
+//     this.title = title;
+//     this.servings = servings;
+//     this.ingredients = [];
+//     this.addIngredient = function(ingredient) {
+//         this.ingredients.push(ingredient)
+//     };
+//     this.listContent = function() {
+
+//         console.log(this.title);
+//         console.log("Serves: "+this.servings);
+//         console.log("Ingredients:");
+//         this.ingredients.forEach(function(ingredient) { console.log(ingredient) });
+
+//     };
+// }
+
+
+// // Reading list
+
+// document.write("<h1>The reading list</h1>")
+
+// var bookList = [
+
+// {title: "Atlas Shrugged", author: "Ayn Rand", alreadyRead: 1},
+// {title: "The Count of Monte Cristo", author: "Alexandre Duma", alreadyRead: 0},
+// {title: "Lord of Flies", author: "William Golding", alreadyRead: 1},
+// {title: "1984", author: "George Orwell", alreadyRead: 1},
+// {title: "Brave New World", author: "Aldous Huxley", alreadyRead: 1}
+
+// ]
+
+
+// bookList.forEach( function(book) {
+
+//     if (book.alreadyRead === 1)
+//     {console.log("I have already read "+book.title+" by "+book.author)}
+//     else 
+//     {console.log("I have not yet read "+book.title+" by "+book.author)}
+
+// })
+
+
+
+// The movie database
+
+var movie = {
+
+    title: "The Lord of the Rings",
+    duration: "2 hours",
+    stars: ["Elijah Wood","Ian McKellen","Liv Tyler","Viggo Mortensen","Sean Astin","Cate Blanchette"]
+
+}
+
+
+for (var property in movie) {
+
+    if (Object.prototype.toString.call(movie[property]).indexOf("rray") > -1) //test if this an Array object
+        {
+        console.log("The stars are:");
+        console.log(movie[property].forEach(function(star){console.log(star)}))
+        }
+    else 
+        {
+            console.log("The "+property+" of the movie is "+movie[property])
+
+        }
+
+}
 
 
 
