@@ -219,6 +219,30 @@
 
 // document.write("<p>"+plurilize("dog",4)+", "+plurilize("chicken",1)+", "+plurilize("cat",3)+", "+plurilize("eel",6)+"</p>")
 
+// Array exercise
+
+document.write("<h1>Array exercise</h1>")
+
+var favoriteFruits = ['Watermelon','Banana','Apple',"Orange","Grape"]
+
+var i = 0
+
+
+do {
+
+    var pre
+
+    if (i === 0) {pre = "1st" ;}
+    else if (i === 1) {pre = "2nd" ;}
+    else if (i === 2) {pre = "3rd" ;}
+    else {pre = i+1+"th" ;}
+
+    document.write("<p>My "+pre+" favorite fruit is "+favoriteFruits[i]+"</p>")
+    
+    i++;
+
+} while (i < favoriteFruits.length)
+
 
 
 </script>
